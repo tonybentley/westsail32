@@ -5,7 +5,9 @@
 	<title>Sail Calculator</title>
 	<script>
 		const sailArea = (knts) =>
- { if (knts = 0 || 1  ) {return 'Motor or wait for more wind!'; }
+ { 
+     //console.log(knts)
+    if (knts == 0 || knts == 1  ) {return 'Motor or wait for more wind!'; }
     else if (knts >= 2 && knts < 8 ) {return 'spinnaker or drifter';}
   else if (knts >= 8 && knts < 18 ) { return 'Three sheets to the wind! Full Jib Staysail and full main.';}
   else if (knts >=18 & knts < 22 ){'First reef mainsail,  full jib and staysail.'}
@@ -20,7 +22,6 @@
   else if (knts > 101 ){ return 'seek shelter.';}
   else if (knts < 0 ){return ' Input must be above "0".';}
 }; 
-console.log(sailArea(13));
 </script>
 
 </head>
@@ -31,27 +32,10 @@ console.log(sailArea(13));
 
 	  <label for="Windspeed">Knts:</label><br>
   <input type="text" id="Knts" name="knts" ><br>
-    <input type="submit" value="Submit" onclick="document.write(sailArea())">
+    <input type="submit" value="Submit" onclick="document.write(sailArea(document.getElementById('Knts').value))">
 
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
