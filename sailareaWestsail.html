@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Sail Calculator</title>
+	<script>
+		const sailArea = (knts) =>
+ { if (knts = 0 || 1  ) {return 'Motor or wait for more wind!'; }
+    else if (knts >= 2 && knts < 8 ) {return 'spinnaker or drifter';}
+  else if (knts >= 8 && knts < 18 ) { return 'Three sheets to the wind! Full Jib Staysail and full main.';}
+  else if (knts >=18 & knts < 22 ){'First reef mainsail,  full jib and staysail.'}
+  else if ( knts >= 22 && knts < 25 ){ return 'first reef in mainsail, full jib, furl staysail.';}
+  else if (knts >= 25 && knts < 30){return 'second reef main, partially furl jib.';}
+  else if (knts >= 30 && knts < 40 ){return 'second reef main and stay sail.'; } 
+  else if ( knts >= 40 && knts < 45) {return 'Double reef main only.';}
+  else if (knts >= 45 && knts < 50){return 'tripple reef main or Trisail. Heave-to depeinding on sea state.'}
+  else if ( knts >= 50 && knts < 65){return 'Storm Trisail or tripple reef main, heave-to.';}
+  else if (knts >= 65 && knts < 80) {return 'Paratech sea anchor on bow or series drogue from stern';}
+  else if (knts >= 80 && knts <= 100){return 'monitor sea anchor or drogue for chafe.';}
+  else if (knts > 101 ){ return 'seek shelter.';}
+  else if (knts < 0 ){return ' Input must be above "0".';}
+}; 
+console.log(sailArea(13));
+</script>
+
+</head>
+<body>
+<h1> Westsail 32 Sail / Windspeed Calculator. </h1>
+
+<P> Enter wind speed in Knots </p>
+
+	  <label for="Windspeed">Knts:</label><br>
+  <input type="text" id="Knts" name="knts" ><br>
+    <input type="submit" value="Submit" onclick="document.write(sailArea())">
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
